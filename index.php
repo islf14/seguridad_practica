@@ -15,6 +15,7 @@
             if(empty($_POST["entrada"])){
                $ent="* Campo necesario";
             }else{
+                
                 //$dato = $_POST["entrada"];
                 $dato = test_input($_POST["entrada"]);
                 $cod = base64_encode($dato);
