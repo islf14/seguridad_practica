@@ -26,9 +26,9 @@
             }   
         }
         function test_input($data) {
-            $data = trim($data);
-            $data = stripslashes($data);
-            $data = htmlspecialchars($data);
+            $data = trim($data);//quita los espacios de los bordes
+            $data = stripslashes($data);// quita los saltos de linea
+            $data = htmlspecialchars($data);//
             return $data;
         }
     ?>
