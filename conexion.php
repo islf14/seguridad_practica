@@ -1,7 +1,7 @@
 <?php
 	function conectar(){
 		$server="localhost";
-		$bd="codificado";
+		$bd="usuario_contrasena";
 		$user="root";
 		$pass="123456";
 

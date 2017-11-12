@@ -16,6 +16,7 @@
                $ent="* Campo necesario";
             }else{
                 
+                
                 //$dato = $_POST["entrada"];
                 $dato = test_input($_POST["entrada"]);
                 $cod = base64_encode($dato);
@@ -23,6 +24,7 @@
                 $nombre = test_input($_POST["nombre"]);
                 $con= conectar();
                 $con->query("INSERT INTO `usuario` (`cod`, `usuario`, `contrasena_en`) VALUES (NULL, '$nombre', '$cod');");
+                echo "<script>alert('Registro Exitoso')</script>";
             }   
         }
         function test_input($data) {
@@ -49,9 +51,14 @@
     <input type="text" id="nom_salida" value="<?php echo $nombre;?>" readonly><br><br>
     <label for="cod">Contraseña encriptada:</label>
     <input type="text" id="cod" value="<?php echo $cod;?>" readonly><br><br>
+    
+    <!--
     <label for="dec">Contraseña desencriptada:</label>
-    <input type="text" id="dec" value="<?php echo $dec;?>" readonly>
-    <br>
+    <input type="text" id="dec" value="<?php echo $dec;?>" readonly>-->
+    <br><br><br>
+
+
+<li><a href="index.php">Ir a INICIO</a></li>
 
 </body>
 </html>
