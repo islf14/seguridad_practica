@@ -28,6 +28,8 @@
             }   
         }
         function test_input($data) {
+            echo ' <script language="javascript">alert("entrando a funcion ");</script> ';
+
             $data = trim($data);//quita los espacios de los bordes
             $data = stripslashes($data);// quita los saltos de linea
             $data = htmlspecialchars($data);//
